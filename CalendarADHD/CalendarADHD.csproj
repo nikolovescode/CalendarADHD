@@ -213,13 +213,157 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlannedWorkshiftsController.cs" />
+    <Compile Include="Controllers\SettingsPausesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\WorkNotesController.cs" />
+    <Compile Include="Controllers\WorkshiftsController.cs" />
+    <Compile Include="Controllers\WorkTasksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902271701005_FirstMigration.cs" />
+    <Compile Include="Migrations\201902271701005_FirstMigration.Designer.cs">
+      <DependentUpon>201902271701005_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271715211_StringReferenceWorkTaskSubclass.cs" />
+    <Compile Include="Migrations\201902271715211_StringReferenceWorkTaskSubclass.Designer.cs">
+      <DependentUpon>201902271715211_StringReferenceWorkTaskSubclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271721245_AddedUserToTask.cs" />
+    <Compile Include="Migrations\201902271721245_AddedUserToTask.Designer.cs">
+      <DependentUpon>201902271721245_AddedUserToTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271724385_AddUserToSubtask.cs" />
+    <Compile Include="Migrations\201902271724385_AddUserToSubtask.Designer.cs">
+      <DependentUpon>201902271724385_AddUserToSubtask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271745108_PostUser.cs" />
+    <Compile Include="Migrations\201902271745108_PostUser.Designer.cs">
+      <DependentUpon>201902271745108_PostUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271746248_PostWorkshift.cs" />
+    <Compile Include="Migrations\201902271746248_PostWorkshift.Designer.cs">
+      <DependentUpon>201902271746248_PostWorkshift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271747278_AddSubtask.cs" />
+    <Compile Include="Migrations\201902271747278_AddSubtask.Designer.cs">
+      <DependentUpon>201902271747278_AddSubtask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271748185_PostTask.cs" />
+    <Compile Include="Migrations\201902271748185_PostTask.Designer.cs">
+      <DependentUpon>201902271748185_PostTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271803377_Workshiftfix.cs" />
+    <Compile Include="Migrations\201902271803377_Workshiftfix.Designer.cs">
+      <DependentUpon>201902271803377_Workshiftfix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271810115_TaskTitleString.cs" />
+    <Compile Include="Migrations\201902271810115_TaskTitleString.Designer.cs">
+      <DependentUpon>201902271810115_TaskTitleString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271817154_WorkTaskTitleReference.cs" />
+    <Compile Include="Migrations\201902271817154_WorkTaskTitleReference.Designer.cs">
+      <DependentUpon>201902271817154_WorkTaskTitleReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902271937038_AddedPauseToUser.cs" />
+    <Compile Include="Migrations\201902271937038_AddedPauseToUser.Designer.cs">
+      <DependentUpon>201902271937038_AddedPauseToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902272000420_RemovedPauseFromUser.cs" />
+    <Compile Include="Migrations\201902272000420_RemovedPauseFromUser.Designer.cs">
+      <DependentUpon>201902272000420_RemovedPauseFromUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902272007214_AddedPausesClass.cs" />
+    <Compile Include="Migrations\201902272007214_AddedPausesClass.Designer.cs">
+      <DependentUpon>201902272007214_AddedPausesClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902272034079_AddedReminder.cs" />
+    <Compile Include="Migrations\201902272034079_AddedReminder.Designer.cs">
+      <DependentUpon>201902272034079_AddedReminder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902272046105_AddedPriorityToSubtask.cs" />
+    <Compile Include="Migrations\201902272046105_AddedPriorityToSubtask.Designer.cs">
+      <DependentUpon>201902272046105_AddedPriorityToSubtask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902272100512_AddedAveragePauseOnWorkshift.cs" />
+    <Compile Include="Migrations\201902272100512_AddedAveragePauseOnWorkshift.Designer.cs">
+      <DependentUpon>201902272100512_AddedAveragePauseOnWorkshift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902281140025_AddPlannedWorkshift.cs" />
+    <Compile Include="Migrations\201902281140025_AddPlannedWorkshift.Designer.cs">
+      <DependentUpon>201902281140025_AddPlannedWorkshift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902281142424_RemovedControllerDuplicats.cs" />
+    <Compile Include="Migrations\201902281142424_RemovedControllerDuplicats.Designer.cs">
+      <DependentUpon>201902281142424_RemovedControllerDuplicats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902281152364_AddedDateToWorkshift.cs" />
+    <Compile Include="Migrations\201902281152364_AddedDateToWorkshift.Designer.cs">
+      <DependentUpon>201902281152364_AddedDateToWorkshift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902281157412_AddedGetDate.cs" />
+    <Compile Include="Migrations\201902281157412_AddedGetDate.Designer.cs">
+      <DependentUpon>201902281157412_AddedGetDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903291421027_AddedLengthOfWork.cs" />
+    <Compile Include="Migrations\201903291421027_AddedLengthOfWork.Designer.cs">
+      <DependentUpon>201903291421027_AddedLengthOfWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903292140045_WorkshiftWorktaskTitleIncluded.cs" />
+    <Compile Include="Migrations\201903292140045_WorkshiftWorktaskTitleIncluded.Designer.cs">
+      <DependentUpon>201903292140045_WorkshiftWorktaskTitleIncluded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903301622403_RemovedDetailsOfTask.cs" />
+    <Compile Include="Migrations\201903301622403_RemovedDetailsOfTask.Designer.cs">
+      <DependentUpon>201903301622403_RemovedDetailsOfTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903301633330_AddedPauseWotkToTask.cs" />
+    <Compile Include="Migrations\201903301633330_AddedPauseWotkToTask.Designer.cs">
+      <DependentUpon>201903301633330_AddedPauseWotkToTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903302024152_IntStringBugg.cs" />
+    <Compile Include="Migrations\201903302024152_IntStringBugg.Designer.cs">
+      <DependentUpon>201903302024152_IntStringBugg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905120520339_UpdatedWorkshift.cs" />
+    <Compile Include="Migrations\201905120520339_UpdatedWorkshift.Designer.cs">
+      <DependentUpon>201905120520339_UpdatedWorkshift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905120529373_UpdatedPlannedWorkshift.cs" />
+    <Compile Include="Migrations\201905120529373_UpdatedPlannedWorkshift.Designer.cs">
+      <DependentUpon>201905120529373_UpdatedPlannedWorkshift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905120553537_WorktaskIdToPlanned.cs" />
+    <Compile Include="Migrations\201905120553537_WorktaskIdToPlanned.Designer.cs">
+      <DependentUpon>201905120553537_WorktaskIdToPlanned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905120605110_WorktaskIdToWorkshift.cs" />
+    <Compile Include="Migrations\201905120605110_WorktaskIdToWorkshift.Designer.cs">
+      <DependentUpon>201905120605110_WorktaskIdToWorkshift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905120614407_AddedSettingsPause.cs" />
+    <Compile Include="Migrations\201905120614407_AddedSettingsPause.Designer.cs">
+      <DependentUpon>201905120614407_AddedSettingsPause.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905150853177_AddedMinutesToPlanned.cs" />
+    <Compile Include="Migrations\201905150853177_AddedMinutesToPlanned.Designer.cs">
+      <DependentUpon>201905150853177_AddedMinutesToPlanned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905161513419_AddedUpdate.cs" />
+    <Compile Include="Migrations\201905161513419_AddedUpdate.Designer.cs">
+      <DependentUpon>201905161513419_AddedUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CalendarADHDDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\PlannedWorkshift.cs" />
+    <Compile Include="Models\SettingsPause.cs" />
+    <Compile Include="Models\WorkNote.cs" />
+    <Compile Include="Models\WorkTask.cs" />
+    <Compile Include="Models\Workshift.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -255,6 +399,14 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Properties\PublishProfiles\CalendarADHD - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\CalendarADHD - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\CalendarADHD - FTP2.pubxml" />
+    <None Include="Properties\PublishProfiles\calendaradhd - FTP3.pubxml" />
+    <None Include="Properties\PublishProfiles\CalendarADHD - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\CalendarADHD - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\CalendarADHD - Web Deploy2.pubxml" />
+    <None Include="Properties\PublishProfiles\calendaradhd - Web Deploy3.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -266,7 +418,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -312,6 +466,107 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201902271701005_FirstMigration.resx">
+      <DependentUpon>201902271701005_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271715211_StringReferenceWorkTaskSubclass.resx">
+      <DependentUpon>201902271715211_StringReferenceWorkTaskSubclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271721245_AddedUserToTask.resx">
+      <DependentUpon>201902271721245_AddedUserToTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271724385_AddUserToSubtask.resx">
+      <DependentUpon>201902271724385_AddUserToSubtask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271745108_PostUser.resx">
+      <DependentUpon>201902271745108_PostUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271746248_PostWorkshift.resx">
+      <DependentUpon>201902271746248_PostWorkshift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271747278_AddSubtask.resx">
+      <DependentUpon>201902271747278_AddSubtask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271748185_PostTask.resx">
+      <DependentUpon>201902271748185_PostTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271803377_Workshiftfix.resx">
+      <DependentUpon>201902271803377_Workshiftfix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271810115_TaskTitleString.resx">
+      <DependentUpon>201902271810115_TaskTitleString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271817154_WorkTaskTitleReference.resx">
+      <DependentUpon>201902271817154_WorkTaskTitleReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902271937038_AddedPauseToUser.resx">
+      <DependentUpon>201902271937038_AddedPauseToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902272000420_RemovedPauseFromUser.resx">
+      <DependentUpon>201902272000420_RemovedPauseFromUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902272007214_AddedPausesClass.resx">
+      <DependentUpon>201902272007214_AddedPausesClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902272034079_AddedReminder.resx">
+      <DependentUpon>201902272034079_AddedReminder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902272046105_AddedPriorityToSubtask.resx">
+      <DependentUpon>201902272046105_AddedPriorityToSubtask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902272100512_AddedAveragePauseOnWorkshift.resx">
+      <DependentUpon>201902272100512_AddedAveragePauseOnWorkshift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902281140025_AddPlannedWorkshift.resx">
+      <DependentUpon>201902281140025_AddPlannedWorkshift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902281142424_RemovedControllerDuplicats.resx">
+      <DependentUpon>201902281142424_RemovedControllerDuplicats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902281152364_AddedDateToWorkshift.resx">
+      <DependentUpon>201902281152364_AddedDateToWorkshift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902281157412_AddedGetDate.resx">
+      <DependentUpon>201902281157412_AddedGetDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903291421027_AddedLengthOfWork.resx">
+      <DependentUpon>201903291421027_AddedLengthOfWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903292140045_WorkshiftWorktaskTitleIncluded.resx">
+      <DependentUpon>201903292140045_WorkshiftWorktaskTitleIncluded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903301622403_RemovedDetailsOfTask.resx">
+      <DependentUpon>201903301622403_RemovedDetailsOfTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903301633330_AddedPauseWotkToTask.resx">
+      <DependentUpon>201903301633330_AddedPauseWotkToTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903302024152_IntStringBugg.resx">
+      <DependentUpon>201903302024152_IntStringBugg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905120520339_UpdatedWorkshift.resx">
+      <DependentUpon>201905120520339_UpdatedWorkshift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905120529373_UpdatedPlannedWorkshift.resx">
+      <DependentUpon>201905120529373_UpdatedPlannedWorkshift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905120553537_WorktaskIdToPlanned.resx">
+      <DependentUpon>201905120553537_WorktaskIdToPlanned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905120605110_WorktaskIdToWorkshift.resx">
+      <DependentUpon>201905120605110_WorktaskIdToWorkshift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905120614407_AddedSettingsPause.resx">
+      <DependentUpon>201905120614407_AddedSettingsPause.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905150853177_AddedMinutesToPlanned.resx">
+      <DependentUpon>201905150853177_AddedMinutesToPlanned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905161513419_AddedUpdate.resx">
+      <DependentUpon>201905161513419_AddedUpdate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
